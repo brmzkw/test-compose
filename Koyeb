@@ -1,9 +1,0 @@
-FROM docker:dind
-
-COPY koyeb-entrypoint.sh /koyeb-entrypoint.sh
-
-COPY . /app
-WORKDIR /app
-
-ENTRYPOINT ["/koyeb-entrypoint.sh"]
-CMD ["docker", "compose", "up"]
